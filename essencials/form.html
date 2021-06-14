@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue App-Intances</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="app">
+		First name <input type="text" v-model="student.fname" ><br>
+    First name <input type="text" v-model="student.lname" ><br>
+    First name <input type="date" v-model="student.dob" ><br>
+    First name <input type="Number" v-model="student.age" ><br>
+    <button type="button" @click='submit'name="button">submit</button>
+	</div>
+<pre>{{ students | json}}</pre>
+
+<script type="text/javascript">
+			var app = new Vue({
+				el:'.app',
+				data:{
+					student:{
+          fname:``,
+          lname:``,
+          dob:Date.toString(),
+          age:Number
+        },
+          students:[]
+				},
+        methods:{
+          submit(){
+            this.students.push(this.student)
+          }
+        }
+			})
+		</script>
+</body>
+</html>

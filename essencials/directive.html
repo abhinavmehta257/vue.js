@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue App-Directives</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="app">
+		<h1 v-if='random<20'>{{text}}</h1>
+		{{random}}
+	</div>
+
+
+<script type="text/javascript">
+			var app = new Vue({
+				el:'.app',
+				data:{
+					random: Math.floor(Math.random()*50) +1,
+					
+					text:'randonm number'
+				}
+			})
+		</script>
+</body>
+</html>

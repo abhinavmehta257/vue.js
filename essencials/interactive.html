@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue App-Loops</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://davidtkatz.com/public_css/vue.css">
+	<style type="text/css">
+		.vue-btn
+	</style>
+</head>
+<body>
+	<div class="app">
+	
+			<button class="vue-btn" @click="reveal1">
+				reveal1
+			</button>
+			<button class="vue-btn" v-on:click="reveal2">
+				reveal2
+			</button>
+			<button class="vue-btn" v-on:click="reveal3">
+				reveal3
+			</button>
+		
+	</div>
+
+
+<script type="text/javascript">
+			var app = new Vue({
+				el:'.app',
+				data:{
+					secnum: 96
+				},
+				methods:{
+					reveal1(){
+						alert('reveal 1')
+					},
+					reveal2(){
+						alert('reveal 2')
+					},
+					reveal3(){
+						alert('reveal 3')
+					}
+				}
+			})
+		</script>
+</body>
+</html>
